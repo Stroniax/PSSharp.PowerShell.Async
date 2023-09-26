@@ -14,6 +14,7 @@
 		<Version>0.1.0</Version>
 		<PackageTags>PowerShell;Async;Job;Cmdlet;ArgumentCompleter;</PackageTags>
 		<Description>PowerShell cmdlet, argument completer, and job (base) classes with async support.</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
