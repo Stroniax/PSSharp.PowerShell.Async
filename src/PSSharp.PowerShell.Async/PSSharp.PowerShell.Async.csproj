@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;netstandard2.0</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion Condition="'$(TargetFramework)' == 'netstandard2.0'">8.0</LangVersion>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Caleb Frederickson</Authors>
+		<Copyright>Copyright (c) Caleb Frederickson 2023</Copyright>
+		<PackageProjectUrl>https://github.com/stroniax/PSSharp.PowerShell.Async</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/stroniax/PSSharp.PowerShell.Async</RepositoryUrl>
+		<Version>0.1.0</Version>
+		<PackageTags>PowerShell;Async;Job;Cmdlet;ArgumentCompleter;</PackageTags>
+		<Description>PowerShell cmdlet, argument completer, and job (base) classes with async support.</Description>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="PowerShellStandard.Library" Version="5.1.1" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+		<PackageReference Include="System.Management.Automation" Version="7.3.7" PrivateAssets="all" />
+	</ItemGroup>
+
+</Project>
